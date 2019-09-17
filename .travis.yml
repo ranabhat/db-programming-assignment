@@ -1,0 +1,15 @@
+dist: xenial # required for node
+language: node_js
+node_js:
+ - "12"
+ #- node
+before_install:
+  - if [ "${TRAVIS_PULL_REQUEST}" != "false" ]; then npx audit-ci -m; fi
+# command to install dependencies
+install:
+  - npm install
+cache:
+  npm: false
+
+script: npm test
+#later need to add test scripts
