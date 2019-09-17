@@ -60,7 +60,7 @@ And the response should be:
 7. From Terminal `curl --header "Content-Type: application/json" \
             --request POST \
             --data '{"text":"hello 2 times  "}' \
-            https://mysuperawesomeapi.com/analyze `
+            https://localhost:8080/analyze `
 
 ## <a name="license">License</a>
 
