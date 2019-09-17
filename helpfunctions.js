@@ -11,6 +11,14 @@ module.exports = {
         return total
       }, {})
     }
-    return [sentenceBody.length, textWithReplacedSpace.length, wordsInSentence, [counter(alphabeticOrder)]]
+    const getAlphabetCount = counter(alphabeticOrder)
+    const arrayOfEachAlphabetCount = Object.entries(getAlphabetCount).reduce((o, [k, v]) => {
+      const [letter] = k.match(/\D+|\d+$/g)
+      o[letter] = { ...(o[letter] || {}), [letter]: v }
+      return o
+    }, {})
+
+    const arrayOfObjectAlbhabet = Object.values(arrayOfEachAlphabetCount)
+    return [sentenceBody.length, textWithReplacedSpace.length, wordsInSentence, arrayOfObjectAlbhabet]
   }
 }
