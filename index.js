@@ -18,10 +18,12 @@ app.use(compression()) // compress all the routes (for high traffic website we u
 app.use(helmet()) // sets appropriate HTTP headers to protect app from well known vulnerabilities
 
 // Initialize the app.
-var server = app.listen(process.env.PORT || 8080, function () {
+/* var server = app.listen(process.env.PORT || 8080, function () {
   var port = server.address().port
- // console.log('App now running on port', port)
-})
+  console.log('App now running on port', port)
+}) */
+
+app.listen(process.env.PORT || 8080)
 
 // DB Challenge API ROUTES BELOW
 
