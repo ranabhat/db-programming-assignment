@@ -44,4 +44,4 @@ CMD ["node", "index.js"]
 # `docker exec -it <container id> /bin/bash`
 
 # Test
-# `curl -i localhost:49160` 
+# `curl -i localhost:49160/analyze` 
