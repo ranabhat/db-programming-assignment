@@ -74,12 +74,10 @@ And the response should be:
             localhost:49160/analyze ```
 
 ### <a name="heroku">Heroku Test URL</a>
-```
-curl -i --header "Content-Type: application/json" \
+1. Run ```curl -i --header "Content-Type: application/json" \
             --request POST \
             --data '{"text":"hello 2 times  "}' \
-            https://db-challenge-db.herokuapp.com/analyze 
-```
+            https://db-challenge-db.herokuapp.com/analyze ```
 
 ## <a name="license">License</a>
 
