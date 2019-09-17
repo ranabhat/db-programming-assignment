@@ -37,6 +37,7 @@ And the response should be:
     - [Download the source code](#download)
     - [Starting development](#startingdevelopment)
     - [Start development using docker](#docker)
+    - [Heroku Test URL](#heroku)
 - [License](#license)
 
 ## <a name="quickstart">Quick start guide</a>
@@ -67,10 +68,16 @@ And the response should be:
 1. Go to the directory that has Dockerfile and run `docker build -t <nameyouwanttogive> .`
 2. Run the image `docker run -p 49160:8080 -d <nameyouwanttogive>`
 3. Run `curl -i localhost:49160/analyze`
-4. Run ```curl -i localhost:49160/analyze --header "Content-Type: application/json" \
+4. Run ```curl -i --header "Content-Type: application/json" \
             --request POST \
             --data '{"text":"hello 2 times  "}' \
-            https://mysuperawesomeapi.com/analyze ```
+            localhost:49160/analyze ```
+
+### <a name="heroku">Heroku Test URL</a>
+1. ```curl -i --header "Content-Type: application/json" \
+            --request POST \
+            --data '{"text":"hello 2 times  "}' \
+            https://db-challenge-db.herokuapp.com/analyze ```
 
 ## <a name="license">License</a>
 
