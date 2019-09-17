@@ -36,6 +36,7 @@ And the response should be:
     - [Requirements](#requirements)
     - [Download the source code](#download)
     - [Starting development](#startingdevelopment)
+    - [Start development using docker](#docker)
 - [License](#license)
 
 ## <a name="quickstart">Quick start guide</a>
@@ -61,6 +62,15 @@ And the response should be:
             --request POST \
             --data '{"text":"hello 2 times  "}' \
             https://localhost:8080/analyze `
+
+### <a name="docker">Start development using docker</a>
+1. Go to the directory that has Dockerfile and run `docker build -t <nameyouwanttogive> .`
+2. Run the image `docker run -p 49160:8080 -d <nameyouwanttogive>`
+3. Run `curl -i localhost:49160/analyze`
+4. Run ```curl -i localhost:49160/analyze --header "Content-Type: application/json" \
+            --request POST \
+            --data '{"text":"hello 2 times  "}' \
+            https://mysuperawesomeapi.com/analyze ```
 
 ## <a name="license">License</a>
 
