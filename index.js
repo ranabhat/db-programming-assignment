@@ -1,6 +1,10 @@
 const express = require('express') // import express node library
 const bodyParser = require('body-parser') // Parse incoming request bodies in a middleware before handlers, available under the req.body property
 
+// For production needed
+const compression = require('compression') // Import compression
+const helmet = require('helmet') // Import helmet
+
 const analyze = require('./helpfunctions')
 
 // creates an express application object
@@ -10,10 +14,13 @@ var app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
+app.use(compression()) // compress all the routes (for high traffic website we use Nginx)
+app.use(helmet()) // sets appropriate HTTP headers to protect app from well known vulnerabilities
+
 // Initialize the app.
 var server = app.listen(process.env.PORT || 8080, function () {
   var port = server.address().port
-  console.log('App now running on port', port)
+ // console.log('App now running on port', port)
 })
 
 // DB Challenge API ROUTES BELOW
