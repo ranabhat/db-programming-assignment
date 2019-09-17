@@ -3,8 +3,13 @@ module.exports = {
     const sentenceBody = receiveValue // Object Property Text Length
     const textWithReplacedSpace = sentenceBody.replace(/\s/g, '') // All spaces stripped from the string
     const textWithRemovedNumber = textWithReplacedSpace.replace(/[^a-zA-Z ]/g, '')
-    const alphabeticOrder = textWithRemovedNumber.split('').sort().join('')
-    const wordsInSentence = sentenceBody.trim().split(/\s+/).length // words counts
+    const textSplit = textWithRemovedNumber.split('')
+    // return all values from array in lowercase
+    const alphabetLowercase = textSplit.map((value) => {
+      return value.toLowerCase()
+    })
+    const alphabeticOrder = alphabetLowercase.sort().join('')
+    const wordsInSentence = (sentenceBody === '') ? 0 : sentenceBody.trim().split(/\s+/).length // words counts
     const counter = str => {
       return str.split('').reduce((total, letter) => {
         total[letter] ? total[letter]++ : total[letter] = 1
