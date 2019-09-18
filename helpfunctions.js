@@ -1,3 +1,9 @@
+/*
+ * Author: Paribesh Ranabhat
+ * Application Name :- db-programming-assignment
+ * Licensed under the MIT License
+ * You may use the file in compliance with the License.
+ */
 module.exports = {
   analyze: (receiveValue) => {
     const sentenceBody = receiveValue // Object Property Text Length
