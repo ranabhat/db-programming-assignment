@@ -1,3 +1,9 @@
+/*
+ * Author: Paribesh Ranabhat
+ * Application Name :- db-programming-assignment
+ * Licensed under the MIT License
+ * You may use the file in compliance with the License.
+ */
 const express = require('express') // import express node library
 const bodyParser = require('body-parser') // Parse incoming request bodies in a middleware before handlers, available under the req.body property
 
