@@ -1,3 +1,9 @@
+/*
+ * Author: Paribesh Ranabhat
+ * Application Name :- db-programming-assignment
+ * Licensed under the MIT License
+ * You may use the file in compliance with the License.
+ */
 const analyze = require('../helpfunctions')
 
 test('from provided text calculate array of[ text length , word count, character count - test1]', () => {
