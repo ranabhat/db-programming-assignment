@@ -50,7 +50,7 @@ And the response should be:
 ### <a name="download">Download the source code</a>
 1. Open up your favorite kind of console
 2. Navigate to the folder in which you want to store the source code
-3. Run `git clone https://github.com/ranabhat/db-programming-assignment`
+3. Run `git clone https://github.com/ranabhat/db-programming-assignment.git`
 
 
 ### <a name="startingdevelopment">Starting development</a>
